@@ -1,0 +1,16 @@
+services:
+  book:
+    image: skwong2021/book:1.0
+    container_name: book
+    ports:
+      - "10000:10000"
+    environment:
+      - dbURL=mysql+mysqlconnector://is213@host.docker.internal:3306/book
+
+  # hello:
+  #   image: skwong2021/hello-world:latest
+  #   container_name: hello
+  #   ports:
+  #     - "10001:10001"
+  #   environment:
+  #     - dbURL=mysql+mysqlconnector://is213@host.docker.internal:3306/book
